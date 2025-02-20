@@ -1,0 +1,4 @@
+[submodule "client-gateway"]
+	path = client-gateway
+	url = https://github.com/NEST-MICROSERVICES-TESTING/client-gateway.git
+	branch = Bestrada
