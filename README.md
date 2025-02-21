@@ -10,7 +10,11 @@
 2. Clonar el repositorio en la máquina local
 3. Añadir el submodule, donde `repository_url` es la url del repositorio y `directory_name` es el nombre de la carpeta donde quieres que se guarde el sub-módulo (no debe de existir en el proyecto)
 ```
-git submodule add <repository_url> <directory_name>
+git submodule add <repository_url> <directory_name> 
+```
+O si se quiere enlazar con una rama en específico:
+```
+git submodule add -b rama ruta-del-repo nombre-del-submodulo
 ```
 4. Añadir los cambios al repositorio (git add, git commit, git push)
 Ej:
@@ -34,4 +38,8 @@ Si se trabaja en el repositorio que tiene los sub-módulos, **primero actualizar
 
 Si se hace al revés, se perderán las referencias de los sub-módulos en el repositorio principal y tendremos que resolver conflictos.
 
-## test
+## QUITAR SUBMODULO
+git submodule deinit -f client-gateway
+git rm -f client-gateway
+Remove-Item -Recurse -Force .git\modules\client-gateway
+git config --remove-section submodule.client-gateway

@@ -2,3 +2,7 @@
 	path = client-gateway
 	url = https://github.com/NEST-MICROSERVICES-TESTING/client-gateway.git
 	branch = Bestrada
+[submodule "products-microservice"]
+	path = products-microservice
+	url = https://github.com/NEST-MICROSERVICES-TESTING/products-microservice.git
+	branch = Bestrada
