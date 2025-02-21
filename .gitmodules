@@ -6,3 +6,7 @@
 	path = products-microservice
 	url = https://github.com/NEST-MICROSERVICES-TESTING/products-microservice.git
 	branch = Bestrada
+[submodule "orders-microservice"]
+	path = orders-microservice
+	url = https://github.com/NEST-MICROSERVICES-TESTING/orders-microservice.git
+	branch = Bestrada
