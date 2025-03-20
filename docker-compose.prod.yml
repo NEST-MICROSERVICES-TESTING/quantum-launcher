@@ -11,7 +11,7 @@ services:
     build:
       context: ./client-gateway
       dockerfile: dockerfile.prod
-    image: client-gateway-prod
+    image: northamerica-south1-docker.pkg.dev/tienda-microservicios-454219/image-registry/client-gateway
     ports:
       - ${CLIENT_GATEWAY_PORT}:3000
     environment:
@@ -26,7 +26,7 @@ services:
     build:
       context: ./auth-microservice
       dockerfile: dockerfile.prod
-    image: auth-microservice
+    image: northamerica-south1-docker.pkg.dev/tienda-microservicios-454219/image-registry/auth-microservice
     environment:
       - PORT=3000
       - NATS_SERVERS=nats://nats-server:4222
@@ -37,7 +37,7 @@ services:
     build:
       context: ./products-microservice
       dockerfile: dockerfile.prod
-    image: products-microservice
+    image: northamerica-south1-docker.pkg.dev/tienda-microservicios-454219/image-registry/products-microservice
     environment:
       - PORT=3000
       - NATS_SERVERS=nats://nats-server:4222
@@ -51,7 +51,7 @@ services:
       dockerfile: dockerfile.prod
       args:
         - ORDERS_DATABASE_URL=${ORDERS_DATABASE_URL}
-    image: orders-microservice
+    image: northamerica-south1-docker.pkg.dev/tienda-microservicios-454219/image-registry/orders-microservice
     environment:
       - PORT=3000
       - DATABASE_URL=${ORDERS_DATABASE_URL}
@@ -65,7 +65,7 @@ services:
     build:
       context: ./payments-microservice
       dockerfile: dockerfile.prod
-    image: payments-microservice
+    image: northamerica-south1-docker.pkg.dev/tienda-microservicios-454219/image-registry/payments-microservice
     ports:
       - ${PAYMENTS_MICROSERVICE_PORT}:${PAYMENTS_MICROSERVICE_PORT}
     environment:
