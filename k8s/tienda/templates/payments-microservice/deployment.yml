@@ -18,7 +18,8 @@ spec:
         app: payments-microservice
     spec:
       containers:
-      - image: northamerica-south1-docker.pkg.dev/tienda-microservicios-454219/image-registry/payments-microservice
+      - image: northamerica-south1-docker.pkg.dev/tienda-microservicios-454219/image-registry/payments-microservice:latest
+        imagePullPolicy: Always
         name: payments-microservice
         env:
         - name: PORT
