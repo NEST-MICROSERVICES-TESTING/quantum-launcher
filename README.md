@@ -44,4 +44,10 @@ git rm -f client-gateway
 Remove-Item -Recurse -Force .git\modules\client-gateway
 git config --remove-section submodule.client-gateway
 
-## CAMBIO Bestrada
+
+
+
+## PROD
+1. Clonar el repositorio
+2. Crear .env basado en el .env.template
+3. Ejecutar `docker compose -f docker-compose.prod.yml build`
